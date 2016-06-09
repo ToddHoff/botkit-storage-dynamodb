@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thelinuxlich/botkit-storage-rethinkdb.git"
+    "url": "git+https://github.com/ToddHoff/botkit-storage-dynamodb.git"
   },
   "keywords": [
     "botkit",
@@ -20,9 +20,9 @@
   "author": "Todd Hoff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thelinuxlich/botkit-storage-rethinkdb/issues"
+    "url": "https://github.com/ToddHoff/botkit-storage-dynamodb/issues"
   },
-  "homepage": "https://github.com/thelinuxlich/botkit-storage-rethinkdb#readme",
+  "homepage": "https://github.com/ToddHoff/botkit-storage-dynamodb.git#readme"
   "dependencies": {
     "aws-sdk": "^2.3.16"
   }
