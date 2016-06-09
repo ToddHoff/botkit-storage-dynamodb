@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/ToddHoff/botkit-storage-dynamodb/issues"
   },
-  "homepage": "https://github.com/ToddHoff/botkit-storage-dynamodb.git#readme"
+  "homepage": "https://github.com/ToddHoff/botkit-storage-dynamodb.git#readme",
   "dependencies": {
     "aws-sdk": "^2.3.16"
   }
