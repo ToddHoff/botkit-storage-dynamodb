@@ -8,12 +8,13 @@ module.exports = function(config) {
   config = config || {};
   config.namespace = config.namespace || 'botkit';
   config.AWS = config.AWS || require('aws-sdk');
+  config.tableName = config.tableName || 'botkit';
 
   var storage = {};
   var client = new config.AWS.DynamoDB.DocumentClient();
 
   ['teams', 'channels', 'users'].forEach(function(method) {
-    storage[method] = getStorageObj(client, config.namespace +  method); 
+    storage[method] = getStorageObj(client, config.tableName);
   })
 
   return storage;
