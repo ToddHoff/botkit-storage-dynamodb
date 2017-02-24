@@ -37,6 +37,7 @@ function getStorageObj(client, namespace) {
       }
 
       client.get(params, function(error, data) {
+        console.log(error, data);
         cb(error, (data.Item) ? data.Item: undefined);
       })
     },
