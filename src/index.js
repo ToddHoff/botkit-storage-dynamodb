@@ -9,6 +9,9 @@ module.exports = function(config) {
   config.namespace = config.namespace || 'botkit';
   config.AWS = config.AWS || require('aws-sdk');
   config.tableName = config.tableName || 'botkit';
+  config.AWS.config.update({
+    region: "us-east-1",
+  });
 
   var storage = {};
   var client = new config.AWS.DynamoDB.DocumentClient();
@@ -37,7 +40,7 @@ function getStorageObj(client, namespace) {
       }
 
       client.get(params, function(error, data) {
-        console.log(error, data);
+        console.log('hello',error, data);
         cb(error, (data.Item) ? data.Item: undefined);
       })
     },
