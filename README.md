@@ -31,10 +31,15 @@ var controller = Botkit.slackbot({
 );
 ```
 
-```
+```javascript
 // then you can use the Botkit storage api, make sure you have an id property
 var beans = {id: 'cool', beans: ['pinto', 'garbanzo']};
-controller.storage.teams.save(beans);
-beans = controller.storage.teams.get('cool');
+controller.storage.teams.save(beans, function(err, result) {
+  if (err) throw err;
+  controller.storage.teams.get('cool', function(err, data) {
+    if (err) throw err;
+    console.log('We just got:', data);
+  });  
+});
 
 ```
